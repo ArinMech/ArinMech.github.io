@@ -4,8 +4,12 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Arin Chaudhary — Mechanical Engineer</title>
-<meta name="description" content="Portfolio of Arin Chaudhary, Mechanical Engineering student at the University of Illinois Urbana-Champaign — composites, CAD, simulation, and product design." />
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚙️</text></svg>" />
+<meta name="description" content="Arin Chaudhary — Mechanical Engineering at UIUC. Composite structures, crash-safe hardware, and the analysis tools that size them. Creo, Ansys, Python." />
+<meta name="author" content="Arin Chaudhary" />
+<meta property="og:title" content="Arin Chaudhary — Mechanical Engineer" />
+<meta property="og:description" content="Composite structures, crash-safe hardware, and the analysis tools that size them." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2216%22 fill=%22%230c0e12%22/><text x=%2250%22 y=%2268%22 font-size=%2252%22 font-family=%22monospace%22 font-weight=%22bold%22 fill=%22%23f4f4f1%22 text-anchor=%22middle%22>AC</text></svg>" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -16,236 +20,264 @@
 <div class="grid-overlay" aria-hidden="true"></div>
 
 <header class="nav" id="nav">
-  <a href="#top" class="nav-brand">AC<span class="dot">.</span></a>
-  <nav class="nav-links">
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <a class="nav-resume" href="assets/Arin_Chaudhary_Resume.pdf" target="_blank" rel="noopener">Resume</a>
-  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
+  <div class="nav-inner">
+    <a href="#top" class="nav-brand">
+      <span class="brand-mark" aria-hidden="true">AC</span>
+      Arin Chaudhary
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-resume" href="assets/Arin_Chaudhary_Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </header>
 
 <main>
 
-  <section class="hero" id="top">
-    <div class="hero-inner">
-      <p class="eyebrow"><span class="eyebrow-dash"></span> Mechanical Engineering &middot; UIUC</p>
-      <h1>Arin Chaudhary</h1>
-      <p class="hero-sub">I design, simulate, and build things that have to survive the real world — from composite panels engineered against SAE structural rules to sheet-metal mounts that keep sensors alive in a crash.</p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-num">20,000+</span>
-          <span class="stat-label">ply schedules screened programmatically</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">22 lbs</span>
-          <span class="stat-label">final weight of regulated SAE panels</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num">$700</span>
-          <span class="stat-label">target sell price, automated chessboard</span>
+  <!-- ============ HERO ============ -->
+  <section class="hero wrap" id="top">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Mechanical Engineering &middot; UIUC</p>
+        <h1>Hardware that has to <em>work the first time</em>.</h1>
+        <p class="hero-sub">
+          I size composite structures against SAE rules, design crash-safe hardware that survives a season of testing, and write the <strong>Python</strong> that searches the tradeoff space instead of guessing at it. Analysis, manufacturing, and the test rig all have to agree — that's the job.
+        </p>
+        <div class="hero-actions">
+          <a href="#work" class="btn btn-primary">See the work <span class="arrow">→</span></a>
+          <a href="assets/Arin_Chaudhary_Resume.pdf" target="_blank" rel="noopener" class="btn btn-ghost">Résumé ↗</a>
         </div>
       </div>
-    </div>
-    <div class="hero-visual" aria-hidden="true">
-      <svg viewBox="0 0 400 400" class="blueprint-svg">
-        <defs>
-          <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.25"/>
-          </pattern>
-        </defs>
-        <rect width="400" height="400" fill="url(#grid)" />
-        <g class="spin-slow" style="transform-origin:200px 200px;">
-          <circle cx="200" cy="200" r="120" fill="none" stroke="currentColor" stroke-width="1" opacity="0.5" stroke-dasharray="4 6"/>
-          <circle cx="200" cy="200" r="80" fill="none" stroke="currentColor" stroke-width="1" opacity="0.7"/>
-        </g>
-        <g class="spin-rev" style="transform-origin:200px 200px;">
-          <path d="M200 60 L214 90 L186 90 Z" fill="currentColor" opacity="0.8"/>
-          <circle cx="200" cy="200" r="150" fill="none" stroke="currentColor" stroke-width="1" opacity="0.3"/>
-        </g>
-        <circle cx="200" cy="200" r="4" fill="currentColor"/>
-      </svg>
-    </div>
-  </section>
 
-  <section class="about" id="about">
-    <div class="section-head">
-      <h2><span class="tag-num">01</span> About</h2>
-    </div>
-    <div class="about-grid">
-      <p class="about-text">
-        I'm a Mechanical Engineering student at the <strong>University of Illinois Urbana-Champaign</strong>, focused on the space between analysis and manufacturing — where a hand calculation, a simulation, and a physical layup all have to agree with each other. My work spans <strong>composite laminate design</strong> for SAE-regulated structures, <strong>CAD and DFM</strong> for manufacturable mechanisms, and <strong>test-driven validation</strong> using real bend and shear data instead of just simulation output.
-      </p>
-      <p class="about-text">
-        I like problems that force a tradeoff — stiffness vs. weight, cost vs. performance, elegant design vs. what a machine shop can actually produce — and I write code (mostly Python) to search that tradeoff space instead of guessing at it.
-      </p>
+      <aside class="spec-card" aria-label="At a glance">
+        <div class="spec-head">
+          <span>At a glance</span>
+          <span><span class="status-dot" aria-hidden="true"></span> Available</span>
+        </div>
+        <dl class="spec-rows">
+          <div class="spec-row">
+            <dt>Status</dt>
+            <dd>Open to internships &amp; co-ops</dd>
+          </div>
+          <div class="spec-row">
+            <dt>Studying</dt>
+            <dd>Mechanical Engineering <span class="muted">— University of Illinois Urbana-Champaign</span></dd>
+          </div>
+          <div class="spec-row">
+            <dt>Focus</dt>
+            <dd>Composites · Structural analysis · DFM</dd>
+          </div>
+          <div class="spec-row">
+            <dt>Toolset</dt>
+            <dd>Creo · Ansys · Python · Fusion 360</dd>
+          </div>
+          <div class="spec-row">
+            <dt>Based in</dt>
+            <dd>Urbana-Champaign, IL</dd>
+          </div>
+        </dl>
+      </aside>
     </div>
   </section>
 
-  <section class="projects" id="projects">
+  <!-- ============ METRICS ============ -->
+  <section class="metrics" aria-label="Highlights">
+    <div class="metrics-grid">
+      <div class="metric reveal">
+        <span class="metric-num">20,000+</span>
+        <span class="metric-label">ply schedules screened programmatically, then narrowed to two for physical test</span>
+      </div>
+      <div class="metric reveal">
+        <span class="metric-num">22 lbs</span>
+        <span class="metric-label">final weight of a full set of SAE-regulated composite panels</span>
+      </div>
+      <div class="metric reveal">
+        <span class="metric-num">$700</span>
+        <span class="metric-label">target sell price for a fully cost-analyzed automated chessboard</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WORK ============ -->
+  <section class="work section-pad wrap" id="work">
     <div class="section-head">
-      <h2><span class="tag-num">02</span> Projects</h2>
+      <span class="tag-num">01</span>
+      <h2>Selected work</h2>
+      <span class="section-note">3 projects</span>
     </div>
 
-    <div class="project-list">
+    <div class="work-list">
 
-      <article class="project-card" data-project="panel">
-        <div class="project-top">
-          <div>
-            <span class="project-role">Project Lead</span>
-            <h3>Regulated Panel Sizing</h3>
-            <p class="project-blurb">Sized and manufactured SAE-regulated composite sandwich panels — screening 20,000+ ply schedules computationally, then validating the top candidates with physical testing.</p>
-          </div>
-          <div class="project-tags">
-            <span>Python</span><span>Ansys ACP</span><span>Creo</span><span>CLT</span>
-          </div>
+      <!-- Panel -->
+      <article class="work-item reveal">
+        <div class="work-shot">
+          <img src="assets/projects/panel-layup.jpg" alt="Carbon fiber sandwich panel with aluminum honeycomb core after a 3-point bend test" loading="lazy" width="480" height="360" />
+          <span class="shot-tag">T700/T800 layup · Al core</span>
         </div>
-        <div class="project-cols">
-          <div class="project-col">
-            <h4>What</h4>
-            <ul>
-              <li>Built a program that iterated through 20,000+ ply schedules and shortlisted 2 to test based on stiffness and energy absorption.</li>
-              <li>Performed 3-point bend and perimeter shear tests on the 2 panels to obtain stress-strain curves.</li>
-            </ul>
+        <div class="work-body">
+          <div class="work-meta">
+            <span class="work-index">01</span>
+            <span class="role-chip">Project Lead</span>
           </div>
-          <div class="project-col">
-            <h4>How</h4>
-            <ul>
-              <li>Analyzed panels using fundamentals of solid mechanics and Composite Laminate Theory (CLT).</li>
-              <li>Wrote the ply-sweeper in Python; simulated test panels in Ansys (Static Structural + ACP).</li>
-              <li>Manufactured sandwich panels via layup using T700/T800 carbon fiber and an aluminum core.</li>
-              <li>Modeled panel locations in Creo Parametric ("Clown-Car" diagram — e.g. green = Side Impact Structure).</li>
-            </ul>
+          <h3>Regulated Panel Sizing</h3>
+          <p class="work-blurb">
+            SAE requires proof that every structural panel on the car meets a baseline. I wrote a solver to search the laminate space, then took the two best candidates to an Instron and made them prove it.
+          </p>
+          <ul class="work-results">
+            <li><span class="res-num">20,000+</span><span>ply schedules swept in Python, ranked on stiffness and energy absorption</span></li>
+            <li><span class="res-num">22 lbs</span><span>total regulated panel weight — minimized without losing compliance</span></li>
+            <li><span class="res-num">2 tests</span><span>3-point bend and perimeter shear, run to stress–strain curves</span></li>
+          </ul>
+          <div class="work-tools">
+            <span>Python</span><span>Ansys ACP</span><span>Static Structural</span><span>Creo</span><span>CLT</span><span>Instron</span>
           </div>
-          <div class="project-col">
-            <h4>Results</h4>
-            <ul>
-              <li>Minimized weight of all regulated panels to ~22 lbs.</li>
-              <li>Completed the Structures Equivalency Spreadsheet (SES) and submitted to SAE for feedback.</li>
-            </ul>
-          </div>
+          <a href="projects/panel.html" class="work-link">Read the case study <span class="arrow">→</span></a>
         </div>
-        <a href="projects/panel.html" class="project-case-link">View case study &amp; photos &rarr;</a>
       </article>
 
-      <article class="project-card" data-project="sensor">
-        <div class="project-top">
-          <div>
-            <span class="project-role">Responsible Engineer</span>
-            <h3>Suspension Tire Temp Sensor Mount</h3>
-            <p class="project-blurb">Designed a crash-safe mount for the IRN8C tire temperature sensor, engineered to prevent fracture and part collision during a frontal impact.</p>
-          </div>
-          <div class="project-tags">
-            <span>Creo Parametric</span><span>Sheet Metal</span><span>Kinematics</span>
-          </div>
+      <!-- Sensor -->
+      <article class="work-item reveal">
+        <div class="work-shot viewport">
+          <img src="assets/projects/sensor-mount-cad.png" alt="Creo CAD model of the sheet-metal tire temperature sensor mount" loading="lazy" width="439" height="279" />
+          <span class="shot-tag">Creo · 1/16&quot; sheet metal</span>
         </div>
-        <div class="project-cols">
-          <div class="project-col">
-            <h4>What</h4>
-            <ul>
-              <li>Designed a tire temperature sensor mount for the IRN8C sensor.</li>
-              <li>Mount had to be strategically shaped to prevent fracture in a frontal collision.</li>
-            </ul>
+        <div class="work-body">
+          <div class="work-meta">
+            <span class="work-index">02</span>
+            <span class="role-chip">Responsible Engineer</span>
           </div>
-          <div class="project-col">
-            <h4>How</h4>
-            <ul>
-              <li>Modeled the part in Creo Parametric; manufactured from 1/16" sheet metal.</li>
-              <li>Built a kinematic model to verify clearance and prevent collision with other suspension parts.</li>
-            </ul>
+          <h3>Tire Temp Sensor Mount</h3>
+          <p class="work-blurb">
+            The IRN8C sensor has to sit inches from a moving wheel and stay alive through a frontal impact. The mount is shaped to fail safely and modeled kinematically so it never touches anything it shouldn't.
+          </p>
+          <ul class="work-results">
+            <li><span class="res-num">Zero</span><span>sensor damage across the driving sessions it ran</span></li>
+            <li><span class="res-num">Full sweep</span><span>kinematic model verifying clearance through suspension travel</span></li>
+            <li><span class="res-num">On car</span><span>manufactured and run in live vehicle testing</span></li>
+          </ul>
+          <div class="work-tools">
+            <span>Creo Parametric</span><span>Sheet Metal</span><span>Kinematics</span><span>GD&amp;T</span>
           </div>
-          <div class="project-col">
-            <h4>Results</h4>
-            <ul>
-              <li>Design fulfilled its purpose and was used during vehicle testing sessions.</li>
-              <li>Prevented sensor damage across driving sessions.</li>
-            </ul>
-          </div>
+          <a href="projects/sensor.html" class="work-link">Read the case study <span class="arrow">→</span></a>
         </div>
-        <a href="projects/sensor.html" class="project-case-link">View case study &amp; photos &rarr;</a>
       </article>
 
-      <article class="project-card" data-project="chess">
-        <div class="project-top">
-          <div>
-            <span class="project-role">Team Lead</span>
-            <h3>Automated Chess Board</h3>
-            <p class="project-blurb">Took an automated chessboard from concept to a manufacturable, cost-justified design — letting a player compete without needing a human opponent.</p>
-          </div>
-          <div class="project-tags">
-            <span>Fusion 360</span><span>aPriori</span><span>DFM</span><span>Injection Molding</span>
-          </div>
+      <!-- Chess -->
+      <article class="work-item reveal">
+        <div class="work-shot viewport">
+          <img src="assets/projects/chess-board-render.png" alt="Rendered automated chessboard with a piece moved by the internal 2-axis system" loading="lazy" width="495" height="248" />
+          <span class="shot-tag">Fusion 360 render</span>
         </div>
-        <div class="project-cols">
-          <div class="project-col">
-            <h4>What</h4>
-            <ul>
-              <li>Built a full 3D model and ran DFM and cost analysis on an automated chessboard.</li>
-              <li>Goal: let people play chess without requiring an opponent.</li>
-            </ul>
+        <div class="work-body">
+          <div class="work-meta">
+            <span class="work-index">03</span>
+            <span class="role-chip">Team Lead</span>
           </div>
-          <div class="project-col">
-            <h4>How</h4>
-            <ul>
-              <li>Modeled the chessboard and engineering drawings in Fusion 360.</li>
-              <li>Used aPriori to cost-analyze the design.</li>
-              <li>Chose plastic injection molding for the board, corner mounts, slider mounts, and electromagnet holder; specified off-the-shelf parts for the internal 2-axis system.</li>
-            </ul>
+          <h3>Automated Chess Board</h3>
+          <p class="work-blurb">
+            A board that moves its own pieces so you can play without an opponent. Taken from concept to a design a factory could actually quote — every part costed, every process chosen on purpose.
+          </p>
+          <ul class="work-results">
+            <li><span class="res-num">$700</span><span>target sell price, well under comparable products on the market</span></li>
+            <li><span class="res-num">4 parts</span><span>moved to injection molding — board, corner mounts, slider mounts, magnet holder</span></li>
+            <li><span class="res-num">Costed</span><span>full aPriori cost analysis against the CAD, not an estimate</span></li>
+          </ul>
+          <div class="work-tools">
+            <span>Fusion 360</span><span>aPriori</span><span>DFM/DFA</span><span>Injection Molding</span><span>Mechanism Design</span>
           </div>
-          <div class="project-col">
-            <h4>Results</h4>
-            <ul>
-              <li>Targeted a $700 sell price — substantially below market competition.</li>
-              <li>Demonstrated effective use of mechanism design, DFM, and CAD principles end-to-end.</li>
-            </ul>
-          </div>
+          <a href="projects/chess.html" class="work-link">Read the case study <span class="arrow">→</span></a>
         </div>
-        <a href="projects/chess.html" class="project-case-link">View case study &amp; photos &rarr;</a>
       </article>
 
     </div>
   </section>
 
-  <section class="skills" id="skills">
+  <!-- ============ ABOUT ============ -->
+  <section class="about section-pad" id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag-num">02</span>
+        <h2>How I work</h2>
+      </div>
+      <div class="about-grid">
+        <div>
+          <p class="about-text">
+            I'm a Mechanical Engineering student at the <strong>University of Illinois Urbana-Champaign</strong>, and I spend most of my time in the gap between analysis and manufacturing — the place where a hand calculation, a simulation, and a physical layup all have to agree with each other, and usually don't on the first try.
+          </p>
+          <p class="about-text">
+            My work runs from <strong>composite laminate design</strong> for SAE-regulated structures, to <strong>CAD and DFM</strong> for mechanisms a shop can actually produce, to <strong>test-driven validation</strong> using real bend and shear data rather than simulation output alone. I like the problems that force a tradeoff — stiffness against weight, cost against performance, the elegant design against what the machine shop will accept — and I write code, mostly Python, to search that space instead of guessing at it.
+          </p>
+        </div>
+        <div class="principles">
+          <div class="principle">
+            <h4>Search, don't guess</h4>
+            <p>If the design space is big enough to argue about, it's big enough to script. Twenty thousand candidates beats three opinions.</p>
+          </div>
+          <div class="principle">
+            <h4>Test the model</h4>
+            <p>A simulation is a hypothesis. It isn't done until a coupon on a load frame has agreed with it.</p>
+          </div>
+          <div class="principle">
+            <h4>Design for the shop</h4>
+            <p>A part that can't be made on the equipment available isn't a design — it's a drawing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="skills section-pad wrap" id="skills">
     <div class="section-head">
-      <h2><span class="tag-num">03</span> Skills &amp; Tools</h2>
+      <span class="tag-num">03</span>
+      <h2>Skills &amp; tools</h2>
     </div>
     <div class="skills-grid">
       <div class="skill-group">
         <h4>Design</h4>
-        <div class="chip-row"><span>Computer-Aided Design (Catia V5, Creo, Siemens NX, AutoCAD, 3DX)</span><span>DFM/DFA</span><span>GD&amp;T</span><span>DVP&amp;R</span><span>Product Lifecycle Management (PLM)</span><span>Sheet-Metal Design</span><span>aPriori</span><span>Circuit Design</span></div>
+        <div class="chip-row">
+          <span>Creo Parametric</span><span>CATIA V5</span><span>Siemens NX</span><span>Fusion 360</span><span>AutoCAD</span><span>3DX</span><span>Sheet-Metal Design</span><span>DFM / DFA</span><span>GD&amp;T</span><span>DVP&amp;R</span><span>PLM</span><span>aPriori</span><span>Circuit Design</span>
+        </div>
       </div>
       <div class="skill-group">
         <h4>Analysis</h4>
-        <div class="chip-row"><span>Finite Element Analysis (ANSYS)</span><span>SimSolid</span><span>FMEA</span><span>RCA</span><span>Instron Testing</span></div>
+        <div class="chip-row">
+          <span>Ansys (FEA)</span><span>Ansys ACP</span><span>SimSolid</span><span>Composite Laminate Theory</span><span>FMEA</span><span>Root Cause Analysis</span><span>Instron Testing</span>
+        </div>
       </div>
       <div class="skill-group">
         <h4>Programming</h4>
-        <div class="chip-row"><span>Python</span><span>VBA (Visual Basic)</span><span>Bash</span><span>Git</span><span>Java</span><span>MySQL</span><span>MATLAB</span><span>Arduino</span><span>Power Automate</span></div>
+        <div class="chip-row">
+          <span>Python</span><span>MATLAB</span><span>VBA</span><span>Java</span><span>MySQL</span><span>Bash</span><span>Git</span><span>Arduino</span><span>Power Automate</span>
+        </div>
       </div>
       <div class="skill-group">
         <h4>Manufacturing</h4>
-        <div class="chip-row"><span>Rapid Prototyping</span><span>Injection Molding</span><span>Machining</span><span>Composites</span><span>Metrology Equipment</span></div>
+        <div class="chip-row">
+          <span>Composite Layup</span><span>Injection Molding</span><span>Machining</span><span>Rapid Prototyping</span><span>Metrology</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="contact" id="contact">
-    <div class="contact-inner">
-      <h2>Let's build something.</h2>
-      <p>Open to internships, co-ops, and collaboration on mechanical design, composites, or product engineering work.</p>
-      <div class="contact-links">
-        <a href="mailto:ac124@illinois.edu" class="btn btn-primary">ac124@illinois.edu</a>
-        <a href="https://linkedin.com/in/arinchaudhary" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn ↗</a>
-        <a href="assets/Arin_Chaudhary_Resume.pdf" target="_blank" rel="noopener" class="btn btn-ghost">Resume ↗</a>
+  <!-- ============ CONTACT ============ -->
+  <section class="contact section-pad" id="contact">
+    <div class="wrap">
+      <div class="contact-inner">
+        <p class="eyebrow">Contact</p>
+        <h2>Let's build something that has to hold up.</h2>
+        <p>Open to internships, co-ops, and collaboration on mechanical design, composites, or product engineering work. Fastest way to reach me is email.</p>
+        <div class="contact-links">
+          <a href="mailto:ac124@illinois.edu" class="btn btn-primary">ac124@illinois.edu <span class="arrow">→</span></a>
+          <a href="https://linkedin.com/in/arinchaudhary" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn ↗</a>
+          <a href="assets/Arin_Chaudhary_Resume.pdf" target="_blank" rel="noopener" class="btn btn-ghost">Résumé ↗</a>
+        </div>
       </div>
     </div>
   </section>
@@ -253,7 +285,10 @@
 </main>
 
 <footer class="site-footer">
-  <p>&copy; <span id="year"></span> Arin Chaudhary. Built with plain HTML, CSS &amp; JS — no framework required.</p>
+  <div class="footer-inner">
+    <span>&copy; <span id="year"></span> Arin Chaudhary</span>
+    <span>Hand-built · HTML, CSS &amp; JS</span>
+  </div>
 </footer>
 
 <script src="script.js"></script>

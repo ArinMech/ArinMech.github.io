@@ -4,8 +4,10 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Regulated Panel Sizing — Arin Chaudhary</title>
-<meta name="description" content="Case study: SAE-regulated composite sandwich panel sizing — Arin Chaudhary, Mechanical Engineering, UIUC." />
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚙️</text></svg>" />
+<meta name="description" content="Case study: sizing and validating SAE-regulated composite sandwich panels — 20,000+ ply schedules screened in Python, two candidates proven on an Instron." />
+<meta property="og:title" content="Regulated Panel Sizing — Arin Chaudhary" />
+<meta property="og:description" content="Case study: sizing and validating SAE-regulated composite sandwich panels — 20,000+ ply schedules screened in Python, two candidates proven on an Instron." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2216%22 fill=%22%230c0e12%22/><text x=%2250%22 y=%2268%22 font-size=%2252%22 font-family=%22monospace%22 font-weight=%22bold%22 fill=%22%23f4f4f1%22 text-anchor=%22middle%22>AC</text></svg>" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -16,68 +18,112 @@
 <div class="grid-overlay" aria-hidden="true"></div>
 
 <header class="nav" id="nav">
-  <a href="../index.html#top" class="nav-brand">AC<span class="dot">.</span></a>
-  <nav class="nav-links">
-    <a href="../index.html#about">About</a>
-    <a href="../index.html#projects">Projects</a>
-    <a href="../index.html#skills">Skills</a>
-    <a href="../index.html#contact">Contact</a>
-  </nav>
-  <a class="nav-resume" href="../assets/Arin_Chaudhary_Resume.pdf" target="_blank" rel="noopener">Resume</a>
-  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
+  <div class="nav-inner">
+    <a href="../index.html#top" class="nav-brand">
+      <span class="brand-mark" aria-hidden="true">AC</span>
+      Arin Chaudhary
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Main">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <a class="nav-resume" href="../assets/Arin_Chaudhary_Resume.pdf" target="_blank" rel="noopener">R&eacute;sum&eacute; &#8599;</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </header>
 
 <main>
 
-  <section class="case-hero">
-    <a href="../index.html#projects" class="back-link">&larr; Back to projects</a>
-    <span class="project-role">Project Lead</span>
-    <h1>Regulated Panel Sizing</h1>
-    <p class="project-blurb">Sized and manufactured SAE-regulated composite sandwich panels — screening 20,000+ ply schedules computationally, then validating the top candidates with physical testing.</p>
-    <div class="project-tags">
-      <span>Python</span><span>Ansys ACP</span><span>Creo</span><span>CLT</span>
+  <article class="case-hero wrap">
+    <a href="../index.html#work" class="back-link">&larr; All work</a>
+
+    <div class="work-meta">
+      <span class="work-index">01</span>
+      <span class="role-chip">Project Lead</span>
     </div>
+
+    <h1>Regulated Panel Sizing</h1>
+    <p class="case-lede">SAE requires structural proof for every regulated panel on the car. Rather than iterate by hand, I wrote a solver that swept the laminate design space, shortlisted the two strongest candidates, and then made them earn it on a load frame.</p>
+
+    <dl class="case-facts">
+      <div class="case-fact"><dt>Role</dt><dd>Project Lead</dd></div>
+      <div class="case-fact"><dt>Scope</dt><dd>Sizing, simulation, layup, physical test</dd></div>
+      <div class="case-fact"><dt>Materials</dt><dd>T700 / T800 CF, aluminum core</dd></div>
+      <div class="case-fact"><dt>Deliverable</dt><dd>Structures Equivalency Spreadsheet</dd></div>
+    </dl>
 
     <div class="case-gallery">
-      <figure><img class="photo" src="../assets/projects/panel-bend-test.jpg" alt="3-point bend test setup on a composite sandwich panel" /></figure>
-      <figure><img class="photo" src="../assets/projects/panel-layup.jpg" alt="Manufactured carbon fiber sandwich panel with aluminum core" /></figure>
-      <figure><img class="span-2" src="../assets/projects/panel-clowncar-1.png" alt="Creo Clown-Car diagram showing panel locations on the chassis" /></figure>
-      <figure><img class="span-2" src="../assets/projects/panel-clowncar-2.png" alt="Detailed Clown-Car diagram with engineering drawing callouts" /></figure>
+      <figure>
+        <img class="photo" src="../assets/projects/panel-layup.jpg" alt="Manufactured carbon fiber sandwich panel with aluminum honeycomb core" loading="lazy" />
+        <figcaption>Manufactured sandwich panel — CF skins over aluminum core</figcaption>
+      </figure>
+      <figure>
+        <img class="photo" src="../assets/projects/panel-bend-test.jpg" alt="Three-point bend test setup on a composite sandwich panel" loading="lazy" />
+        <figcaption>3-point bend test on the Instron</figcaption>
+      </figure>
+      <figure class="viewport span-2">
+        <img src="../assets/projects/panel-clowncar-1.png" alt="Creo Clown-Car diagram showing regulated panel locations on the chassis" loading="lazy" />
+        <figcaption>Creo &ldquo;Clown-Car&rdquo; diagram — regulated panel locations</figcaption>
+      </figure>
+      <figure class="viewport span-2">
+        <img src="../assets/projects/panel-clowncar-2.png" alt="Detailed Clown-Car diagram with engineering drawing callouts" loading="lazy" />
+        <figcaption>Detail view with callouts — e.g. green = Side Impact Structure</figcaption>
+      </figure>
     </div>
 
-    <div class="project-cols">
-      <div class="project-col">
-        <h4>What</h4>
+    <div class="case-blocks">
+      <div class="case-block">
+        <h4>Problem</h4>
         <ul>
-          <li>Built a program that iterated through 20,000+ ply schedules and shortlisted 2 to test based on stiffness and energy absorption.</li>
-          <li>Performed 3-point bend and perimeter shear tests on the 2 panels to obtain stress-strain curves.</li>
+          <li>Every structural panel on an SAE car has to be proven equivalent to a regulated baseline before the car is allowed to compete.</li>
+          <li>The laminate design space is enormous — ply count, orientation, material, and core thickness all trade against each other, and weight matters everywhere.</li>
+          <li>Hand-iterating a handful of layups risks leaving both stiffness and mass on the table.</li>
         </ul>
       </div>
-      <div class="project-col">
-        <h4>How</h4>
+      <div class="case-block">
+        <h4>Approach</h4>
         <ul>
-          <li>Analyzed panels using fundamentals of solid mechanics and Composite Laminate Theory (CLT).</li>
-          <li>Wrote the ply-sweeper in Python; simulated test panels in Ansys (Static Structural + ACP).</li>
-          <li>Manufactured sandwich panels via layup using T700/T800 carbon fiber and an aluminum core.</li>
-          <li>Modeled panel locations in Creo Parametric ("Clown-Car" diagram — e.g. green = Side Impact Structure).</li>
+          <li>Analyzed panels from first principles using solid mechanics and <strong>Composite Laminate Theory</strong>.</li>
+          <li>Wrote a ply-sweeper in <strong>Python</strong> that iterated <strong>20,000+ ply schedules</strong> and ranked them on stiffness and energy absorption.</li>
+          <li>Simulated the shortlisted panels in <strong>Ansys</strong> — Static Structural plus ACP for the composite definition.</li>
+          <li>Modeled panel locations on the chassis in <strong>Creo Parametric</strong> to keep the analysis tied to real geometry.</li>
         </ul>
       </div>
-      <div class="project-col">
-        <h4>Results</h4>
+      <div class="case-block">
+        <h4>Validation</h4>
         <ul>
-          <li>Minimized weight of all regulated panels to ~22 lbs.</li>
-          <li>Completed the Structures Equivalency Spreadsheet (SES) and submitted to SAE for feedback.</li>
+          <li>Manufactured the two shortlisted panels by hand layup — T700/T800 carbon fiber skins over an aluminum core.</li>
+          <li>Ran <strong>3-point bend</strong> and <strong>perimeter shear</strong> tests to real stress&ndash;strain curves.</li>
+          <li>Compared measured response against the simulated prediction rather than trusting the model alone.</li>
+        </ul>
+      </div>
+      <div class="case-block">
+        <h4>Outcome</h4>
+        <ul>
+          <li>Total regulated panel weight minimized to <strong>~22 lbs</strong> while staying compliant.</li>
+          <li>Completed the <strong>Structures Equivalency Spreadsheet (SES)</strong> and submitted it to SAE for review.</li>
+          <li>Left the team with a reusable sizing tool instead of a one-off answer.</li>
         </ul>
       </div>
     </div>
-  </section>
+
+    <nav class="case-next" aria-label="Next project">
+      <span class="mono">Next project</span>
+      <a href="sensor.html">Tire Temp Sensor Mount <span class="arrow">&rarr;</span></a>
+    </nav>
+  </article>
 
 </main>
 
 <footer class="site-footer">
-  <p>&copy; <span id="year"></span> Arin Chaudhary. Built with plain HTML, CSS &amp; JS — no framework required.</p>
+  <div class="footer-inner">
+    <span>&copy; <span id="year"></span> Arin Chaudhary</span>
+    <span>Hand-built &middot; HTML, CSS &amp; JS</span>
+  </div>
 </footer>
 
 <script src="../script.js"></script>

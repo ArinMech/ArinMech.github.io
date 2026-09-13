@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Suspension Tire Temp Sensor Mount — Arin Chaudhary</title>
-<meta name="description" content="Case study: crash-safe tire temperature sensor mount design — Arin Chaudhary, Mechanical Engineering, UIUC." />
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚙️</text></svg>" />
+<title>Tire Temp Sensor Mount — Arin Chaudhary</title>
+<meta name="description" content="Case study: a crash-safe sheet-metal mount for the IRN8C tire temperature sensor, shaped to fail safely and kinematically verified for clearance." />
+<meta property="og:title" content="Tire Temp Sensor Mount — Arin Chaudhary" />
+<meta property="og:description" content="Case study: a crash-safe sheet-metal mount for the IRN8C tire temperature sensor, shaped to fail safely and kinematically verified for clearance." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2216%22 fill=%22%230c0e12%22/><text x=%2250%22 y=%2268%22 font-size=%2252%22 font-family=%22monospace%22 font-weight=%22bold%22 fill=%22%23f4f4f1%22 text-anchor=%22middle%22>AC</text></svg>" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -16,65 +18,106 @@
 <div class="grid-overlay" aria-hidden="true"></div>
 
 <header class="nav" id="nav">
-  <a href="../index.html#top" class="nav-brand">AC<span class="dot">.</span></a>
-  <nav class="nav-links">
-    <a href="../index.html#about">About</a>
-    <a href="../index.html#projects">Projects</a>
-    <a href="../index.html#skills">Skills</a>
-    <a href="../index.html#contact">Contact</a>
-  </nav>
-  <a class="nav-resume" href="../assets/Arin_Chaudhary_Resume.pdf" target="_blank" rel="noopener">Resume</a>
-  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
+  <div class="nav-inner">
+    <a href="../index.html#top" class="nav-brand">
+      <span class="brand-mark" aria-hidden="true">AC</span>
+      Arin Chaudhary
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Main">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <a class="nav-resume" href="../assets/Arin_Chaudhary_Resume.pdf" target="_blank" rel="noopener">R&eacute;sum&eacute; &#8599;</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </header>
 
 <main>
 
-  <section class="case-hero">
-    <a href="../index.html#projects" class="back-link">&larr; Back to projects</a>
-    <span class="project-role">Responsible Engineer</span>
-    <h1>Suspension Tire Temp Sensor Mount</h1>
-    <p class="project-blurb">Designed a crash-safe mount for the IRN8C tire temperature sensor, engineered to prevent fracture and part collision during a frontal impact.</p>
-    <div class="project-tags">
-      <span>Creo Parametric</span><span>Sheet Metal</span><span>Kinematics</span>
+  <article class="case-hero wrap">
+    <a href="../index.html#work" class="back-link">&larr; All work</a>
+
+    <div class="work-meta">
+      <span class="work-index">02</span>
+      <span class="role-chip">Responsible Engineer</span>
     </div>
+
+    <h1>Tire Temp Sensor Mount</h1>
+    <p class="case-lede">The IRN8C tire temperature sensor has to sit inches from a moving wheel, hold its aim through suspension travel, and not become shrapnel in a frontal impact. The mount is shaped for exactly those three constraints.</p>
+
+    <dl class="case-facts">
+      <div class="case-fact"><dt>Role</dt><dd>Responsible Engineer</dd></div>
+      <div class="case-fact"><dt>Material</dt><dd>1/16&Prime; sheet metal</dd></div>
+      <div class="case-fact"><dt>Constraint</dt><dd>Frontal-impact fracture safety</dd></div>
+      <div class="case-fact"><dt>Status</dt><dd>Run in live vehicle testing</dd></div>
+    </dl>
 
     <div class="case-gallery">
-      <figure><img src="../assets/projects/sensor-mount-cad.png" alt="CAD render of the sheet-metal tire temperature sensor mount" /></figure>
-      <figure><img src="../assets/projects/sensor-mount-wheel-assembly.png" alt="Wheel assembly render showing the sensor mount and IRN8C sensor location" /></figure>
-      <figure><img class="photo span-2" src="../assets/projects/sensor-mount-photo.jpg" alt="Manufactured sheet-metal sensor mount, hand-held for scale" /></figure>
+      <figure class="viewport">
+        <img src="../assets/projects/sensor-mount-cad.png" alt="Creo CAD model of the sheet-metal tire temperature sensor mount" loading="lazy" />
+        <figcaption>Creo model — sheet-metal mount</figcaption>
+      </figure>
+      <figure class="viewport">
+        <img src="../assets/projects/sensor-mount-wheel-assembly.png" alt="Wheel assembly render showing the sensor mount and IRN8C sensor location" loading="lazy" />
+        <figcaption>Wheel assembly — sensor position and clearance envelope</figcaption>
+      </figure>
+      <figure class="span-2">
+        <img class="photo" src="../assets/projects/sensor-mount-photo.jpg" alt="Manufactured sheet-metal sensor mount held for scale" loading="lazy" />
+        <figcaption>As manufactured, 1/16&Prime; sheet metal</figcaption>
+      </figure>
     </div>
 
-    <div class="project-cols">
-      <div class="project-col">
-        <h4>What</h4>
+    <div class="case-blocks">
+      <div class="case-block">
+        <h4>Problem</h4>
         <ul>
-          <li>Designed a tire temperature sensor mount for the IRN8C sensor.</li>
-          <li>Mount had to be strategically shaped to prevent fracture in a frontal collision.</li>
+          <li>The IRN8C sensor needed a mounting solution that held it in position relative to the tire surface for accurate temperature readings.</li>
+          <li>In a frontal collision the mount must not fracture in a way that damages the sensor or the surrounding suspension hardware.</li>
+          <li>Packaging is tight — the part shares space with moving suspension components through the full travel range.</li>
         </ul>
       </div>
-      <div class="project-col">
-        <h4>How</h4>
+      <div class="case-block">
+        <h4>Approach</h4>
         <ul>
-          <li>Modeled the part in Creo Parametric; manufactured from 1/16" sheet metal.</li>
-          <li>Built a kinematic model to verify clearance and prevent collision with other suspension parts.</li>
+          <li>Modeled the part in <strong>Creo Parametric</strong> as a sheet-metal component so it could be produced from <strong>1/16&Prime; stock</strong>.</li>
+          <li>Shaped the geometry deliberately to control where load goes in an impact rather than leaving fracture behavior to chance.</li>
+          <li>Built a <strong>kinematic model</strong> of the assembly to verify clearance and rule out collision with other suspension parts.</li>
         </ul>
       </div>
-      <div class="project-col">
-        <h4>Results</h4>
+      <div class="case-block">
+        <h4>Validation</h4>
         <ul>
-          <li>Design fulfilled its purpose and was used during vehicle testing sessions.</li>
-          <li>Prevented sensor damage across driving sessions.</li>
+          <li>Swept the kinematic model through the suspension travel range to confirm no interference at any point.</li>
+          <li>Manufactured the part and fitted it to the car for real driving sessions rather than bench checks alone.</li>
+        </ul>
+      </div>
+      <div class="case-block">
+        <h4>Outcome</h4>
+        <ul>
+          <li>The mount performed its function and was used throughout vehicle testing sessions.</li>
+          <li><strong>No sensor damage</strong> across the driving sessions it was fitted for.</li>
+          <li>Gave the team usable tire temperature data where there previously was none.</li>
         </ul>
       </div>
     </div>
-  </section>
+
+    <nav class="case-next" aria-label="Next project">
+      <span class="mono">Next project</span>
+      <a href="chess.html">Automated Chess Board <span class="arrow">&rarr;</span></a>
+    </nav>
+  </article>
 
 </main>
 
 <footer class="site-footer">
-  <p>&copy; <span id="year"></span> Arin Chaudhary. Built with plain HTML, CSS &amp; JS — no framework required.</p>
+  <div class="footer-inner">
+    <span>&copy; <span id="year"></span> Arin Chaudhary</span>
+    <span>Hand-built &middot; HTML, CSS &amp; JS</span>
+  </div>
 </footer>
 
 <script src="../script.js"></script>
