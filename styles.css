@@ -1,36 +1,38 @@
 /* ===========================================================
    Arin Chaudhary — portfolio
-   Light technical system: paper ground, ink type, blue signal.
+   Terminal-coded system: navy ground, teal signal, mono labels.
    =========================================================== */
 
 :root {
-  color-scheme: light;
+  color-scheme: dark;
 
   /* Ground */
-  --paper:        #f4f4f1;
-  --paper-2:      #ecece8;
-  --surface:      #ffffff;
-  --viewport:     #0c0e12;   /* dark panel for CAD renders */
+  --paper:        #0a192f;
+  --paper-2:      #0d1f38;
+  --surface:      #112240;
+  --viewport:     #020c1b;   /* deepest navy, for CAD renders + contact block */
 
   /* Ink */
-  --ink:          #0c0e12;
-  --ink-2:        #3d434d;
-  --ink-3:        #757d89;
+  --ink:          #ccd6f6;
+  --ink-2:        #a8b2d1;
+  --ink-3:        #8892b0;
 
   /* Line */
-  --line:         #d9d9d3;
-  --line-strong:  #bfbfb7;
+  --line:         #233554;
+  --line-strong:  #30456b;
 
-  /* Signal */
-  --accent:       #1a3cff;
-  --accent-deep:  #0d24b8;
-  --accent-wash:  #1a3cff12;
-  --signal:       #f2540b;
-  --signal-wash:  #f2540b14;
+  /* Signal — one accent, used sparingly */
+  --accent:       #64ffda;
+  --accent-deep:  #4fd8b8;
+  --accent-wash:  #64ffda1f;
+  --signal:       var(--accent);
+  --signal-wash:  var(--accent-wash);
 
-  --radius:       4px;
-  --radius-lg:    8px;
+  --radius:       3px;
+  --radius-lg:    6px;
   --max:          1180px;
+  --rail:         2.5rem;
+  --ease:         cubic-bezier(0.645, 0.045, 0.355, 1);
 
   --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
   --display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
@@ -86,8 +88,8 @@ img { max-width: 100%; display: block; }
   pointer-events: none;
   z-index: 0;
   background-image:
-    linear-gradient(to right, #00000010 1px, transparent 1px),
-    linear-gradient(to bottom, #00000010 1px, transparent 1px);
+    linear-gradient(to right, #ffffff12 1px, transparent 1px),
+    linear-gradient(to bottom, #ffffff12 1px, transparent 1px);
   background-size: 88px 88px;
   mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, #000 25%, transparent 85%);
   -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, #000 25%, transparent 85%);
@@ -207,7 +209,7 @@ section { position: relative; }
 .nav-links a {
   position: relative;
   padding-block: 0.25rem;
-  transition: color .18s;
+  transition: color .18s var(--ease);
 }
 .nav-links a::after {
   content: '';
@@ -217,12 +219,19 @@ section { position: relative; }
   background: var(--accent);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform .22s ease;
+  transition: transform .22s var(--ease);
 }
 .nav-links a:hover { color: var(--ink); }
 .nav-links a:hover::after,
 .nav-links a.active::after { transform: scaleX(1); }
 .nav-links a.active { color: var(--ink); }
+
+.nav-num {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--accent);
+  margin-right: 0.3rem;
+}
 
 .nav-resume {
   font-family: var(--mono);
@@ -239,6 +248,48 @@ section { position: relative; }
 .nav-resume:hover { background: var(--ink); color: var(--paper); }
 
 .nav-toggle { display: none; }
+
+/* ---------- Side rails (desktop only) ---------- */
+
+.rail {
+  position: fixed;
+  bottom: 0;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+  padding-bottom: 1.5rem;
+}
+.rail::after {
+  content: '';
+  width: 1px;
+  height: 90px;
+  background: var(--line-strong);
+  margin-top: 0.25rem;
+}
+.rail-left { left: var(--rail); }
+.rail-left a {
+  color: var(--ink-3);
+  transition: color .2s var(--ease), transform .2s var(--ease);
+}
+.rail-left a:hover { color: var(--accent); transform: translateY(-3px); }
+.rail-left svg { width: 19px; height: 19px; display: block; }
+
+.rail-right { left: auto; right: var(--rail); }
+.rail-email {
+  writing-mode: vertical-rl;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: var(--ink-3);
+  transition: color .2s var(--ease), transform .2s var(--ease);
+}
+.rail-email:hover { color: var(--accent); transform: translateY(-3px); }
+
+@media (max-width: 1080px) {
+  .rail { display: none; }
+}
 
 /* ---------- Hero ---------- */
 
@@ -457,11 +508,12 @@ section { position: relative; }
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   padding: clamp(1.1rem, 2.2vw, 1.5rem);
-  transition: border-color .25s, box-shadow .25s, transform .25s;
+  transition: border-color .25s var(--ease), box-shadow .25s var(--ease), transform .25s var(--ease);
 }
 .work-item:hover {
-  border-color: var(--line-strong);
-  box-shadow: 0 2px 4px #00000008, 0 20px 40px -28px #00000038;
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 2px 4px #0000002a, 0 20px 40px -28px #00000080;
 }
 .work-item:nth-child(even) .work-shot { order: 2; }
 
@@ -487,7 +539,7 @@ section { position: relative; }
 /* dark viewport for CAD renders on black grounds */
 .work-shot.viewport {
   background: var(--viewport);
-  border-color: #00000018;
+  border-color: #ffffff16;
 }
 .work-shot.viewport img {
   object-fit: contain;
@@ -505,8 +557,8 @@ section { position: relative; }
   padding: 0.3rem 0.55rem;
   border-radius: 3px;
   background: #ffffffe8;
-  color: var(--ink-2);
-  border: 1px solid var(--line);
+  color: #3d434d;
+  border: 1px solid #d9d9d3;
   backdrop-filter: blur(4px);
 }
 .work-shot.viewport .shot-tag {
@@ -623,6 +675,65 @@ section { position: relative; }
 }
 .work-link:hover { color: var(--accent); gap: 0.75rem; }
 
+/* ---------- Experience ---------- */
+
+.timeline {
+  border-left: 1px solid var(--line);
+  padding-left: 1.75rem;
+  max-width: 62ch;
+}
+
+.timeline-item {
+  position: relative;
+  padding-block: 1.35rem;
+  border-bottom: 1px solid var(--line);
+}
+.timeline-item:first-child { padding-top: 0; }
+.timeline-item:last-child { border-bottom: 0; padding-bottom: 0; }
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: calc(-1.75rem - 4px);
+  top: 1.5rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--accent);
+}
+.timeline-item:first-child::before { top: 0.15rem; }
+
+.timeline-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-role {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.timeline-role .timeline-org { color: var(--accent); font-weight: 600; }
+
+.timeline-dates {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+
+.timeline-team {
+  font-size: 0.88rem;
+  color: var(--ink-2);
+}
+
 /* ---------- About ---------- */
 
 .about { background: var(--surface); border-block: 1px solid var(--line); }
@@ -711,7 +822,7 @@ section { position: relative; }
 /* ---------- Contact ---------- */
 
 .contact {
-  background: var(--ink);
+  background: var(--viewport);
   color: #f2f3f5;
   position: relative;
   overflow: hidden;
@@ -750,9 +861,9 @@ section { position: relative; }
 .contact-links { display: flex; gap: 0.75rem; flex-wrap: wrap; }
 
 .contact .btn-primary {
-  background: var(--paper);
-  color: var(--ink);
-  border-color: var(--paper);
+  background: var(--ink);
+  color: var(--viewport);
+  border-color: var(--ink);
 }
 .contact .btn-primary:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
 
@@ -901,7 +1012,7 @@ section { position: relative; }
   background: var(--surface);
   padding: 0.75rem;
 }
-.case-gallery figure.viewport { background: var(--viewport); border-color: #00000018; }
+.case-gallery figure.viewport { background: var(--viewport); border-color: #ffffff16; }
 .case-gallery figure.viewport img { background: var(--viewport); }
 .case-gallery img.photo { object-fit: cover; padding: 0; }
 .case-gallery .span-2 { grid-column: span 2; }
@@ -953,7 +1064,7 @@ section { position: relative; }
 .reveal {
   opacity: 0;
   transform: translateY(16px);
-  transition: opacity .6s cubic-bezier(.2,.7,.3,1), transform .6s cubic-bezier(.2,.7,.3,1);
+  transition: opacity .5s var(--ease), transform .5s var(--ease);
   will-change: opacity, transform;
 }
 .reveal.in { opacity: 1; transform: none; }
