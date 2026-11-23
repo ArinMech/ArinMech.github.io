@@ -1,0 +1,58 @@
+/* A white-page, pool-first visual identity. */
+:root{--orange:#5269e8;--ink:#1d3331;--bg:#f9faff;--line:#e5e9f3}
+body{background:#f9faff}
+.pool-screen{min-height:780px;height:100vh;height:100dvh;position:relative;overflow:hidden;display:flex;flex-direction:column;background:#f9faff;color:#1f3531}
+.pool-screen:before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 75% 9%,#e4eaff9c,transparent 47%);pointer-events:none}
+.pool-head{position:relative;z-index:4;display:flex;justify-content:space-between;align-items:center;padding:25px clamp(24px,5vw,90px) 10px;gap:12px}
+.pool-brand{font:800 21px 'Space Grotesk',sans-serif;letter-spacing:-.07em;white-space:nowrap}.pool-brand span{color:#5269e8}.pool-brand small{display:block;font:700 9px 'DM Sans';letter-spacing:.19em;margin-top:6px;color:#72817b}
+.pool-head-actions{display:flex;align-items:center;gap:24px}.pool-live{font-size:10px;letter-spacing:.18em;font-weight:800;color:#677e75}.pool-live i{display:inline-block;width:8px;height:8px;border-radius:50%;background:#60c29b;margin-right:8px}
+.pool-button{padding:13px 19px;border-radius:99px;font-weight:800;font-size:12px;border:1px solid #c3d4c8;background:#fff;color:#28433c;transition:transform .2s,background .2s}.pool-button:hover{transform:translateY(-2px)}.pool-button.solid{border-color:#5269e8;background:#5269e8;color:#fff}.pool-button.solid:hover{background:#3e53c8}
+.pool-hero-copy{z-index:2;position:relative;text-align:center;flex:0 0 auto;padding:14px 20px 0}.pool-kicker{font-weight:800;letter-spacing:.19em;font-size:10px;color:#658075}.pool-kicker span{color:#536bd9}.pool-hero-copy h1{font-size:clamp(42px,4.6vw,74px);letter-spacing:-.075em;line-height:.95;margin:10px 0 9px}.pool-hero-copy h1 br{display:none}.pool-hero-copy h1 em{font-style:normal;color:#6075e7}.pool-hero-copy p{font-size:clamp(12px,1.1vw,15px);line-height:1.45;color:#61756e;max-width:570px;margin:auto}
+.table-zone{position:relative;flex:1 1 auto;min-height:340px;margin:5px clamp(12px,4.8vw,82px) 0}.table-zone canvas{display:block;width:100%;height:100%;touch-action:none;cursor:crosshair}
+.pool-toolbar{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;margin:0 clamp(22px,6vw,110px);padding:12px 0 9px;border-bottom:1px solid #e4e6db}.pool-instructions{display:flex;flex-direction:column;gap:5px}.pool-instructions strong{font:800 15px 'Space Grotesk';letter-spacing:-.02em}.pool-instructions span{color:#718079;font-size:12px}.pool-actions{display:flex;align-items:center;gap:9px}.select-label{font-size:10px;font-weight:800;letter-spacing:.12em;white-space:nowrap}.pool-actions select{background:#fff;color:#243932;border:1px solid #d6dfd3;border-radius:20px;padding:12px 26px 12px 12px;font:700 12px 'DM Sans';max-width:140px}.pool-reset{color:#5e756b;border:0;background:transparent;font-weight:800;font-size:12px;padding:9px}.pool-scrollcue{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;gap:14px;padding:13px 0 18px;color:#82928c;font-size:9px;letter-spacing:.19em;font-weight:800}.pool-scrollcue a{font-size:22px;color:#5269e8;line-height:1}
+.pool-dialog{position:absolute;inset:0;z-index:10;background:#09251ba9;backdrop-filter:blur(6px);display:grid;place-items:center;padding:15px}.pool-dialog-card{width:min(460px,100%);background:#ffffff;border-radius:24px;padding:35px;text-align:left;box-shadow:0 22px 100px #08251f55}.dialog-eyebrow{font-size:10px;letter-spacing:.19em;font-weight:800;color:#688178}.pocket-swatch{display:block;width:45px;height:45px;border-radius:50%;border:9px solid #fff;box-shadow:0 0 0 1px #eee,0 6px 12px #102b231c;margin:25px 0 17px}.pool-dialog-card h2{font-size:clamp(35px,4vw,53px);line-height:1.1}.pool-dialog-card p{color:#687b72;line-height:1.6;margin:14px 0 25px}.dialog-actions{display:flex;flex-wrap:wrap;gap:10px}
+/* A warm human page rather than a dashboard */
+.personal-about{background:#ffffff}.personal-about .about-grid{align-items:center}.personal-about .about-copy h1{font-size:clamp(45px,5.3vw,83px)}.personal-about .about-quiet{margin-top:20px;max-width:650px}.personal-about .about-quiet strong{color:#204e43}.personal-about .portrait{border-radius:5px;overflow:hidden}.personal-about .portrait img{object-position:center 44%}.personal-about .portrait figcaption{font-size:10px;letter-spacing:.13em}.personal-link{display:inline-flex;gap:18px;align-items:center;padding:17px 0 10px;border-bottom:1px solid #5972e5;font-weight:800;font-size:13px;margin-top:26px;color:#5065d6}.personal-link:hover{color:#3447ac}
+.fun-facts{margin-top:120px;padding-top:70px;border-top:1px solid #e8e7e0}.facts-heading>span{font-size:11px;font-weight:800;letter-spacing:.17em;color:#5269e8}.facts-heading h2{font-size:clamp(39px,5.2vw,70px);line-height:1.05;margin:15px 0}.facts-heading h2 em{font-style:normal;color:#7381d9}.facts-heading p{color:#738079;font-size:15px}.fact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:42px}.fact-card{background:#f5f6f0;border:1px solid #ecefe6;border-radius:11px;padding:30px;min-height:235px;position:relative;transition:transform .2s}.fact-card:hover{transform:translateY(-4px)}.fact-card .fact-icon{font-size:32px;display:block;min-height:50px}.fact-card .fact-num{position:absolute;top:27px;right:27px;font-size:11px;font-weight:800;color:#9baaa1}.fact-card h3{font-size:22px;line-height:1.15;margin-bottom:13px;letter-spacing:-.04em}.fact-card p{font-size:14px;line-height:1.65;color:#66756d}.fact-card a{display:inline-block;font-size:13px;font-weight:800;color:#5066d9;margin-top:14px}.fact-food{background:#f1f0ff;border-color:#e8e6fc}.fact-fea{background:#eef6f4;border-color:#e2eeea}.fact-f1{background:#eaf5fa;border-color:#dcecf4}.fact-watch{background:#f0f3fa;border-color:#e4e9f5}
+@media(max-width:900px){.fact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.pool-live{display:none}.pool-toolbar{justify-content:center}.pool-instructions{text-align:center;flex-basis:100%}}
+@media(max-width:650px){.pool-screen{min-height:700px}.pool-head{padding:19px 18px 10px}.pool-brand{font-size:16px}.pool-brand small{font-size:7px}.pool-head .pool-button{font-size:10px;padding:11px}.pool-hero-copy{padding-top:20px}.pool-hero-copy h1{font-size:49px}.pool-hero-copy p{font-size:12px;max-width:310px}.table-zone{min-height:235px;margin:15px 4px 0}.pool-toolbar{margin:0 12px;padding:9px 0;gap:9px}.pool-instructions strong{font-size:13px}.pool-instructions span{font-size:10px}.pool-actions{gap:6px}.select-label{display:none}.pool-actions select{max-width:117px;font-size:10px;padding:9px}.pool-actions .pool-button{font-size:10px;padding:10px}.pool-reset{font-size:10px}.pool-scrollcue{font-size:8px;padding:12px}.fact-grid{grid-template-columns:1fr}.fact-card{min-height:175px;padding:22px}.fun-facts{margin-top:70px;padding-top:45px}.pool-dialog-card{padding:25px}.personal-about .portrait img{height:460px}}
+
+/* Arin's personal palette: porcelain, cobalt, lavender and a touch of mint. */
+:root{--orange:#5269e8;--bg:#f9faff;--ink:#24314a;--line:#e5e9f3}
+.pool-screen{background:#f9faff;color:#23334e}
+.pool-screen:before{background:radial-gradient(ellipse at 78% 5%,#e9edff 0%,transparent 52%)}
+.pool-brand span,.pool-kicker span,.pool-hero-copy h1 em,.pool-scrollcue a{color:#5269e8}
+.pool-button.solid{background:#5269e8;border-color:#5269e8;color:white}
+.pool-button.solid:hover{background:#3c50c3}
+.personal-about{background:#fff}
+.personal-about .about-copy h1 span{color:#5066d9}
+.personal-about .about-lead{color:#253b55}
+.personal-about .about-quiet strong{color:#465fd0}
+.personal-link{color:#4a61d0;border-bottom-color:#8796f0}
+.personal-link:hover{color:#3449b4}
+.fact-card{background:#f5f7ff;border-color:#e9eafa}
+.fact-food{background:#f1f0ff;border-color:#e4e1fc}
+.fact-fea{background:#ebf9f7;border-color:#d9f0e9}
+.fact-f1{background:#edf5ff;border-color:#deebfa}
+.fact-watch{background:#f2f0fa;border-color:#e7e3f4}
+
+/* Keep the original v3 layout and pool colors; use one charcoal UI accent. */
+:root{--orange:#191919;--ink:#1c1c1c;--bg:#fafaf8;--line:#e6e6e3}
+body,.pool-screen{background:#fafaf8;color:#1c1c1c}
+.pool-screen:before{background:radial-gradient(ellipse at 75% 9%,#efefed,transparent 47%)}
+.pool-brand span,.pool-kicker span,.pool-hero-copy h1 em,.pool-scrollcue a,.facts-heading>span,.facts-heading h2 em,.fact-card a,.personal-link,.personal-about .about-copy h1 span{color:#191919}
+.pool-button.solid{background:#191919;border-color:#191919;color:#fff}
+.pool-button.solid:hover{background:#393939}
+.pool-button{border-color:#d5d5d2;color:#242424}
+.pool-toolbar{border-bottom-color:#e6e6e3}
+.pool-actions select{border-color:#d5d5d2;color:#242424}
+.pool-reset{color:#333}
+.pool-dialog{background:#0a0a0aaa}
+.dialog-eyebrow,.personal-about .about-quiet strong{color:#333}
+.personal-about{background:white}
+.personal-about .about-lead{color:#292929}
+.personal-link{border-bottom-color:#555}
+.personal-link:hover{color:#555}
+.fun-facts{border-top-color:#e5e5e2}
+.fact-card,.fact-food,.fact-fea,.fact-f1,.fact-watch{background:#f6f6f4;border-color:#eaeae7}
+.fact-card p,.facts-heading p{color:#626262}
