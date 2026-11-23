@@ -1,7 +1,5 @@
 # Arin's Break Room — Interactive Portfolio
 
-A zero-dependency personal portfolio built with HTML, CSS, and JavaScript.
-
 ## Run locally
 
 1. Extract the ZIP.
