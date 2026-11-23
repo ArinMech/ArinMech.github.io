@@ -9,7 +9,8 @@ const chapters=[
  {name:'FSAE Chassis',short:'FSAE',section:'projects',url:'project-fsae.html',color:'#e98c68',number:3,desc:'A deep dive into designing and validating our carbon-fiber monocoque.'},
  {name:'ME 370',short:'370',section:'projects',url:'project-me370.html',color:'#a7b8ed',number:4,desc:'My ME 370 project and the engineering behind it.'},
  {name:'ME 371',short:'371',section:'projects',url:'project-me371.html',color:'#e5a5b9',number:5,desc:'Design, analysis, and experiments from ME 371.'},
- {name:'Contact',short:'HELLO',section:'contact',color:'#f4a84e',number:6,desc:'Want to talk engineering, pool, or where to eat next?'}
+ {name:'Topology Optimization',short:'TOPO',section:'projects',url:'project-topology.html',color:'#b7afd9',number:6,desc:'Planar FEA, material distribution, and five topology optimization trials.'},
+ {name:'Contact',short:'HELLO',section:'contact',color:'#f4a84e',number:7,desc:'Want to talk engineering, pool, or where to eat next?'}
 ];
 const world={w:1000,h:494,x0:64,x1:936,y0:62,y1:432,r:15};
 const pockets=[{x:64,y:62},{x:500,y:59},{x:936,y:62},{x:64,y:432},{x:500,y:435},{x:936,y:432}];
@@ -20,7 +21,7 @@ let dragging=false,aim=null,moving=false,paused=false,modalOpen=false,assisted=n
 const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
 const distance=(a,b)=>Math.hypot(a.x-b.x,a.y-b.y);
 const anyMoving=()=>balls.concat(cue).some(b=>b.active&&Math.hypot(b.vx||0,b.vy||0)>.15);
-function setup(){balls.length=0; const positions=[[666,246],[699,228],[699,264],[732,210],[732,246],[732,282]];chapters.forEach((ch,i)=>balls.push({...ch,x:positions[i][0],y:positions[i][1],vx:0,vy:0,r:world.r,active:true}));Object.assign(cue,{x:273,y:246,vx:0,vy:0,active:true});assisted=null;moving=false;modalOpen=false;$('poolDialog').classList.add('hidden');refreshSelect();setStatus('YOUR SHOT.','Drag back from the white ball and release. Or choose a chapter for an easy shot.');}
+function setup(){balls.length=0; const positions=[[666,246],[699,228],[699,264],[732,210],[732,246],[732,282],[765,246]];chapters.forEach((ch,i)=>balls.push({...ch,x:positions[i][0],y:positions[i][1],vx:0,vy:0,r:world.r,active:true}));Object.assign(cue,{x:273,y:246,vx:0,vy:0,active:true});assisted=null;moving=false;modalOpen=false;$('poolDialog').classList.add('hidden');refreshSelect();setStatus('YOUR SHOT.','Drag back from the white ball and release. Or choose a chapter for an easy shot.');}
 function refreshSelect(){const select=$('ballChoice'),current=select.value; select.innerHTML='';balls.filter(b=>b.active).forEach(b=>{const opt=document.createElement('option');opt.value=b.section+':'+b.number;opt.textContent=b.name;select.append(opt)});if([...select.options].some(o=>o.value===current))select.value=current;$('assistShot').disabled=!select.options.length;if(!select.options.length)setStatus('TABLE CLEARED!','All chapters pocketed. Reset to play again.');}
 function selectedBall(){return balls.find(b=>b.active && (b.section+':'+b.number)===$('ballChoice').value)}
 function setStatus(title,detail){$('gameStatus').textContent=title;$('gameHint').textContent=detail;}
