@@ -97,5 +97,5 @@ button:focus-visible,a:focus-visible{outline-color:#505050}
 
 /* Topology project card */
 .project-art.project-topology{background:#fff;color:#000;border-right:1px solid #000;min-height:330px;align-items:center;justify-items:center}
-.project-art.project-topology svg{display:block;width:100%;height:auto;max-height:340px;object-fit:contain;padding:20px 16px 48px}
+.project-art.project-topology img{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;background:#fff;padding:16px 16px 48px}
 .project-art.project-topology>span:last-child{color:#fff;background:#000;bottom:14px;left:14px;padding:9px 12px;letter-spacing:.12em}
