@@ -1,0 +1,44 @@
+/* Single cinematic montage, preserving all other portfolio sections. */
+html{scroll-behavior:smooth}
+.montage{position:relative;min-height:620px;height:100svh;background:#101010;color:#fff;overflow:hidden;isolation:isolate}
+.montage-stage,.montage-scene{position:absolute;inset:0}
+.montage-scene{opacity:0;visibility:hidden;transition:opacity .95s ease,visibility 0s linear .95s;pointer-events:none}
+.montage-scene.active{opacity:1;visibility:visible;transition:opacity .95s ease;pointer-events:auto}
+.montage-scene::before{content:'';position:absolute;inset:-35px;background-image:var(--scene-image);background-position:center;background-size:cover;filter:blur(34px) brightness(.44) saturate(.77);transform:scale(1.045)}
+.montage-scene::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.39),transparent 67%);pointer-events:none}
+.montage-scene>img,.montage-scene>video{position:absolute;top:85px;right:4.5%;bottom:85px;left:auto;width:65%;height:calc(100% - 170px);object-fit:contain;object-position:center;display:block;z-index:1;filter:drop-shadow(0 8px 32px #0007)}
+.montage-scene.is-portrait>img,.montage-scene.is-portrait>video{width:59%;right:3.5%}
+.montage-scene.is-landscape>img,.montage-scene.is-landscape>video{width:69%;right:2%}
+.montage-shade{position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(180deg,#0808084b 0%,transparent 30%,transparent 62%,#0505057c 100%),linear-gradient(90deg,#07070792 0%,transparent 48%)}
+.montage-header{position:absolute;z-index:10;left:0;right:0;top:0;display:flex;align-items:center;justify-content:space-between;gap:25px;padding:26px clamp(22px,5vw,88px);border-bottom:1px solid #ffffff65}
+.montage-name{color:#fff!important;font:800 15px 'DM Sans',sans-serif;letter-spacing:.11em;text-decoration:none}
+.montage-header nav{display:flex;gap:27px}.montage-header nav a{color:#fff!important;font:700 12px 'DM Sans',sans-serif;text-decoration:none}.montage-header nav a:hover{opacity:.7}
+.montage-caption{position:absolute;left:clamp(26px,6vw,110px);right:25px;bottom:clamp(130px,17vh,200px);z-index:3;max-width:710px;transition:transform 1s ease,opacity 1s ease;transform:translateY(17px);opacity:0}
+.montage-scene.active .montage-caption{transform:translateY(0);opacity:1}
+.montage-caption h2{color:#fff;font:700 clamp(40px,4.8vw,76px)/1.06 'Space Grotesk',sans-serif;letter-spacing:-.06em;margin:0 0 14px;text-shadow:0 2px 18px #0009}
+.montage-controls{position:absolute;z-index:10;right:clamp(25px,5vw,90px);bottom:57px;display:flex;gap:10px}
+.montage-control{width:43px;height:43px;border:1px solid #fff9;border-radius:50%;background:#1115;color:#fff;cursor:pointer;font-size:17px;display:grid;place-items:center;transition:background .2s}.montage-control:hover{background:#fff3}
+.montage-indicators{position:absolute;left:clamp(26px,6vw,110px);bottom:53px;z-index:10;display:flex;gap:5px;width:min(340px,40vw);height:3px}
+.montage-indicator{flex:1;background:#ffffff50;overflow:hidden}.montage-indicator i{display:block;height:100%;width:0;background:#fff}.montage-indicator.done i{width:100%}
+.montage-scroll{position:absolute;left:clamp(26px,6vw,110px);bottom:83px;z-index:10;display:inline-flex;gap:16px;align-items:center;color:#fff!important;text-decoration:none;font:700 10px 'DM Sans',sans-serif;letter-spacing:.15em}.montage-scroll span{font-size:19px}
+/* Preserve photos in other portfolio project cards. */
+.project-art.project-me370,.project-art.project-me371,.project-art.project-topology{background:#fff;overflow:hidden}
+.project-art.project-me370 img,.project-art.project-me371 img,.project-art.project-topology img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center;display:block}
+.project-art.project-topology img{object-fit:contain;background:#fff;padding:16px 18px 44px}
+.project-art.project-fsae img{object-fit:cover;object-position:center;position:absolute;inset:0;width:100%;height:100%}
+/* Preserve original About Me facts/card grid. */
+#about .fun-facts{margin-top:110px;padding-top:70px;border-top:1px solid #e5e5e2}
+#about .facts-heading>span{font-size:11px;font-weight:800;letter-spacing:.17em;color:#000}
+#about .facts-heading h2{font-size:clamp(39px,5.2vw,70px);line-height:1.05;margin:15px 0}
+#about .facts-heading h2 em{font-style:normal;color:#000!important}
+#about .facts-heading p{font-size:15px;color:#000!important}
+#about .fact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:42px}
+#about .fact-card{display:block;position:relative;min-height:235px;padding:30px;border:1px solid #eaeae7;border-radius:11px;background:#fff}
+#about .fact-card .fact-icon{display:block;font-size:32px;min-height:50px}
+#about .fact-card .fact-num{position:absolute;top:27px;right:27px;font-size:11px;font-weight:800;color:#000}
+#about .fact-card h3{font-size:22px;line-height:1.15;margin:0 0 13px;letter-spacing:-.04em;color:#000}
+#about .fact-card p{font-size:14px;line-height:1.65;margin:0;color:#000}
+#about .fact-card a{display:inline-block;margin-top:14px;font-size:13px;font-weight:800;color:#000}
+@media(max-width:900px){#about .fact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.montage{min-height:570px}.montage-header{padding:19px 20px}.montage-name{font-size:11px}.montage-header nav{gap:11px}.montage-header nav a{font-size:10px}.montage-scene>img,.montage-scene>video,.montage-scene.is-portrait>img,.montage-scene.is-portrait>video,.montage-scene.is-landscape>img,.montage-scene.is-landscape>video{top:90px;bottom:170px;right:5%;width:90%;height:calc(100% - 270px)}.montage-caption{left:23px;bottom:145px;right:22px}.montage-caption h2{font-size:clamp(39px,9vw,63px)}.montage-controls{bottom:44px;right:20px;gap:6px}.montage-control{width:36px;height:36px}.montage-indicators{bottom:41px;left:23px;width:35vw}.montage-scroll{bottom:78px;left:23px;font-size:9px}#about .fact-grid{grid-template-columns:1fr}#about .fact-card{min-height:175px;padding:22px}#about .fun-facts{margin-top:70px;padding-top:45px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.montage-scene,.montage-caption{transition:none}}
