@@ -1,20 +1,19 @@
-# Cinematic homepage media
+# Homepage montage media
 
-This folder holds the original photos and short excerpts of the original videos supplied for Arin's portfolio. **No synthetic motion, slideshow, or stitched video.**
+This folder contains the original still photos and short extracts from the original videos for the **single montage replacing the pool game**. No generated reel, motion effects on photos, extra gallery, or source credit tags.
 
-To complete the preview, upload these files to this folder in the `cinematic-portfolio-preview` branch:
+Upload the contents of `cinematic-original-media.zip` into `assets/cinema/` on branch `cinematic-portfolio-preview`. The required files are:
 
-- `fsae-hero.jpg` — opening portrait in Formula SAE car
-- `chassis-lift.jpg` — team lifting carbon-fiber chassis
-- `perimeter-test.jpg` and `instron-testing.jpg` — test fixtures
-- `industrial-me.jpg` — personal photo at Tesla
-- `crew.jpg` — Illinois Motorsports team
-- `campus-travel.jpg` — optional extra photo
-- `machining.mp4` — original machine-shop video
-- `circuit-testing.mp4` — original electronics work video
-- `mechanical-testing.mp4` — original testing video
-- `racecar-in-motion.mp4` — original FSAE car footage
+- `fsae-hero.jpg` — opening still photo, in the FSAE car
+- `machining.mp4` — original machining clip
+- `chassis-lift.jpg` — carbon-fiber chassis photo
+- `mechanical-testing.mp4` — original testing clip
+- `perimeter-test.jpg` — test fixture photo
+- `circuit-testing.mp4` — original electronics clip
+- `industrial-me.jpg` — Tesla photo
+- `racecar-in-motion.mp4` — original racecar clip
+- `crew.jpg` — team photo
 
-The homepage renders the car photo as a static opening image. Scrolling shows large original videos and photos with short captions. Videos are muted, loop when visible, and retain playback controls.
+The montage cycles through them automatically, with short captions and crossfades. The portfolio sections below it remain unchanged. The old pool code is preserved in Git history and isn't loaded by this page.
 
-All files are provided in the `cinematic-original-media.zip` package. **Do not merge PR #7 until the upload and visual review are complete.**
+**Do not merge Pull Request #7 until the media has been uploaded and the preview approved.**
