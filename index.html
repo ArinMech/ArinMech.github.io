@@ -2,58 +2,58 @@
 
 <html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="#fafaf8" name="theme-color"/><meta content="Arin Chaudhary — mechanical engineer, builder, and storyteller. Engineering, mechanics, manufacturing, and a personal portfolio." name="description"/><title>Arin Chaudhary | Engineering, Projects &amp; Stories</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="styles.css?v=thumbnail-20261123-4" rel="stylesheet"/><link href="cinematic.css" rel="stylesheet"/></head>
 <body>
-<section class="cinema cinematic-hero" id="cinema" aria-label="Portfolio opening">
-  <div class="cinematic-hero-image">
-    <img src="assets/cinema/fsae-hero.jpg" onerror="this.onerror=null;this.src='fsae-project-thumbnail-v4.png'" alt="Arin sitting in an Illinois Formula SAE race car" fetchpriority="high">
+<section class="montage" id="cinema" aria-label="Engineering montage">
+ <div class="montage-stage" id="montageStage">
+  <div class="montage-scene active" data-duration="4800" aria-hidden="false">
+   <img src="assets/cinema/fsae-hero.jpg" fetchpriority="high" alt="Arin sitting in an Illinois Formula SAE car" onerror="this.onerror=null;this.src='fsae-project-thumbnail-v4.png'">
+   <div class="montage-shade"></div>
+   <div class="montage-caption"><h2>At the race car.</h2><p>One of my favorite parts of building with Illini Electric Motorsports.</p></div>
   </div>
-  <div class="cinema-shade"></div>
-  <header class="cinema-header">
-    <a class="cinema-logo" href="#about">ARIN CHAUDHARY<span> / MECHANICAL ENGINEER</span></a>
-    <nav aria-label="Main navigation"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav>
-  </header>
-  <div class="cinematic-hero-content">
-    <h1>Hi, I'm Arin.</h1>
-    <p>I like building things, testing them, and figuring out what makes them work.</p>
-    <a href="#highlights" class="cinematic-scroll">A LITTLE LOOK AT MY WORK <span>↓</span></a>
+  <div class="montage-scene" data-duration="6000" aria-hidden="true">
+   <video muted playsinline preload="none"><source src="assets/cinema/machining.mp4" type="video/mp4"></video>
+   <div class="montage-shade"></div>
+   <div class="montage-caption"><h2>Machining in the shop.</h2><p>Making parts and figuring things out as I go.</p></div>
   </div>
-</section>
-<section class="cinematic-gallery" id="highlights" aria-label="Engineering and life highlights">
-  <div class="cinematic-gallery-intro"><p>BEHIND THE PROJECTS</p><h2>Some moments along the way.</h2><span>From the workshop to the test rig to the race car.</span></div>
-  <div class="cinematic-stories">
-    <figure class="cinematic-tile cinematic-tile-video cinematic-tile-narrow">
-      <video muted loop playsinline controls preload="none" poster="assets/cinema/chassis-lift.jpg"><source src="assets/cinema/machining.mp4" type="video/mp4">A short video of machining work.</video>
-      <figcaption><strong>In the machine shop.</strong><span>Getting a part ready on the mill.</span></figcaption>
-    </figure>
-    <figure class="cinematic-tile cinematic-tile-wide">
-      <img src="assets/cinema/chassis-lift.jpg" onerror="this.onerror=null;this.src='chassis-cad-perspective.png'" loading="lazy" alt="Arin and teammates holding a composite monocoque chassis">
-      <figcaption><strong>One chassis. Many hands.</strong><span>From laminate design to a finished carbon-fiber shell.</span></figcaption>
-    </figure>
-    <figure class="cinematic-tile cinematic-tile-wide cinematic-tile-video">
-      <video muted loop playsinline controls preload="none" poster="assets/cinema/instron-testing.jpg"><source src="assets/cinema/mechanical-testing.mp4" type="video/mp4">Mechanical testing footage.</video>
-      <figcaption><strong>Putting it to the test.</strong><span>Physical validation, not just a simulation.</span></figcaption>
-    </figure>
-    <figure class="cinematic-tile cinematic-tile-narrow">
-      <img src="assets/cinema/perimeter-test.jpg" onerror="this.onerror=null;this.src='chassis-three-point-bend.png'" loading="lazy" alt="Mechanical testing fixture at the university lab">
-      <figcaption><strong>Perimeter shear testing.</strong><span>Learning what the material actually does.</span></figcaption>
-    </figure>
-    <figure class="cinematic-tile cinematic-tile-narrow cinematic-tile-video">
-      <video muted loop playsinline controls preload="none"><source src="assets/cinema/circuit-testing.mp4" type="video/mp4">Electronics prototyping footage.</video>
-      <figcaption><strong>A circuit on the bench.</strong><span>Wiring and testing an interactive electronics project.</span></figcaption>
-    </figure>
-    <figure class="cinematic-tile cinematic-tile-wide">
-      <img src="assets/cinema/instron-testing.jpg" onerror="this.onerror=null;this.src='chassis-three-point-bend.png'" loading="lazy" alt="Mechanical testing fixture in a load frame">
-      <figcaption><strong>Three-point bend testing.</strong><span>Checking the response of structural samples.</span></figcaption>
-    </figure>
-    <figure class="cinematic-tile cinematic-tile-wide cinematic-tile-video">
-      <video muted loop playsinline controls preload="none" poster="assets/cinema/crew.jpg"><source src="assets/cinema/racecar-in-motion.mp4" type="video/mp4">Illinois racing footage.</video>
-      <figcaption><strong>Race day.</strong><span>The design work finally leaves the workshop.</span></figcaption>
-    </figure>
-    <figure class="cinematic-tile cinematic-tile-narrow">
-      <img src="assets/cinema/industrial-me.jpg" onerror="this.onerror=null;this.src='arin-portrait.jpeg'" loading="lazy" alt="Arin standing outside a Tesla facility">
-      <figcaption><strong>And sometimes, just me.</strong><span>Learning along the way.</span></figcaption>
-    </figure>
+  <div class="montage-scene" data-duration="4300" aria-hidden="true">
+   <img src="assets/cinema/chassis-lift.jpg" loading="lazy" alt="Team holding the carbon-fiber chassis">
+   <div class="montage-shade"></div>
+   <div class="montage-caption"><h2>The chassis comes together.</h2><p>From carbon-fiber layups to a finished monocoque.</p></div>
   </div>
-  <a class="cinematic-end" href="#about">MORE ABOUT ME <span>↓</span></a>
+  <div class="montage-scene" data-duration="6000" aria-hidden="true">
+   <video muted playsinline preload="none"><source src="assets/cinema/mechanical-testing.mp4" type="video/mp4"></video>
+   <div class="montage-shade"></div>
+   <div class="montage-caption"><h2>Putting it to the test.</h2><p>Seeing how a design behaves outside the computer.</p></div>
+  </div>
+  <div class="montage-scene" data-duration="4300" aria-hidden="true">
+   <img src="assets/cinema/perimeter-test.jpg" loading="lazy" alt="Mechanical test fixture and sample">
+   <div class="montage-shade"></div>
+   <div class="montage-caption"><h2>Perimeter shear testing.</h2><p>Testing composite specimens on the load frame.</p></div>
+  </div>
+  <div class="montage-scene" data-duration="6000" aria-hidden="true">
+   <video muted playsinline preload="none"><source src="assets/cinema/circuit-testing.mp4" type="video/mp4"></video>
+   <div class="montage-shade"></div>
+   <div class="montage-caption"><h2>Electronics on the bench.</h2><p>Prototyping and testing an interactive circuit.</p></div>
+  </div>
+  <div class="montage-scene" data-duration="4200" aria-hidden="true">
+   <img src="assets/cinema/industrial-me.jpg" loading="lazy" alt="Arin outside Tesla">
+   <div class="montage-shade"></div>
+   <div class="montage-caption"><h2>A little outside the workshop.</h2><p>Learning and building along the way.</p></div>
+  </div>
+  <div class="montage-scene" data-duration="6000" aria-hidden="true">
+   <video muted playsinline preload="none"><source src="assets/cinema/racecar-in-motion.mp4" type="video/mp4"></video>
+   <div class="montage-shade"></div>
+   <div class="montage-caption"><h2>Out on the road.</h2><p>The race car finally gets to move.</p></div>
+  </div>
+  <div class="montage-scene" data-duration="4500" aria-hidden="true">
+   <img src="assets/cinema/crew.jpg" loading="lazy" alt="Illini Electric Motorsports team with car">
+   <div class="montage-shade"></div>
+   <div class="montage-caption"><h2>The team behind it.</h2><p>None of this happens alone.</p></div>
+  </div>
+ </div>
+ <header class="montage-header"><a class="montage-name" href="#about">ARIN CHAUDHARY</a><nav aria-label="Portfolio"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav></header>
+ <div class="montage-controls"><button class="montage-control" id="montageBack" type="button" aria-label="Previous scene">←</button><button class="montage-control" id="montagePause" type="button" aria-label="Pause montage">Ⅱ</button><button class="montage-control" id="montageNext" type="button" aria-label="Next scene">→</button></div>
+ <div class="montage-indicators" id="montageIndicators" aria-label="Montage progress"><span class="montage-indicator current"><i></i></span><span class="montage-indicator"><i></i></span><span class="montage-indicator"><i></i></span><span class="montage-indicator"><i></i></span><span class="montage-indicator"><i></i></span><span class="montage-indicator"><i></i></span><span class="montage-indicator"><i></i></span><span class="montage-indicator"><i></i></span><span class="montage-indicator"><i></i></span></div>
+ <a class="montage-scroll" href="#about">EXPLORE MY PORTFOLIO <span>↓</span></a>
 </section>
 <div class="site" id="site">
 <header class="site-header"><a class="site-brand" href="#about">ARIN<span>.</span> <small>CHAUDHARY</small></a><nav aria-label="Portfolio navigation"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav><div class="header-actions"><button class="resume-link" id="resumeLink" onclick="window.location.href='assets/Arin_Chaudhary_Resume.pdf'">Resume ↗</button><a class="drive-again" href="#cinema">↗ Highlights</a></div></header>
