@@ -1,33 +1,26 @@
-/* Original photography and footage — no generated reel. */
+/* Single full-screen montage replacing the pool-game section only. */
 html{scroll-behavior:smooth}
-.cinematic-hero{position:relative;min-height:660px;height:100svh;overflow:hidden;background:#161616;color:#fff;isolation:isolate}
-.cinematic-hero-image{position:absolute;inset:0;z-index:-2}
-.cinematic-hero-image img{width:100%;height:100%;display:block;object-fit:cover;object-position:center 47%;filter:saturate(.85)}
-.cinema-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(0,0,0,.5) 0%,rgba(0,0,0,.13) 72%),linear-gradient(0deg,rgba(0,0,0,.72),transparent 65%)}
-.cinema-header{position:absolute;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;gap:25px;padding:29px clamp(20px,5vw,85px);border-bottom:1px solid #ffffff54;z-index:2}
-.cinema-logo{color:white;font:800 14px 'DM Sans',sans-serif;letter-spacing:.12em;text-decoration:none}.cinema-logo span{font-size:10px;margin-left:12px;color:#ffffffbb;font-weight:600}
-.cinema-header nav{display:flex;gap:28px}.cinema-header nav a{color:white;font:700 12px 'DM Sans',sans-serif;text-decoration:none}
-.cinema-header nav a:hover{opacity:.72}
-.cinematic-hero-content{position:absolute;left:clamp(25px,7vw,130px);right:30px;bottom:clamp(65px,11vh,155px);z-index:1}
-.cinematic-hero-content h1{font:700 clamp(64px,9.2vw,156px)/.98 'Space Grotesk',sans-serif;letter-spacing:-.075em;color:#fff;margin:0 0 20px;text-shadow:0 2px 20px #0004}
-.cinematic-hero-content p{font:400 clamp(16px,1.65vw,22px)/1.6 'DM Sans',sans-serif;max-width:660px;color:#f0f0f0;margin:0 0 34px}
-.cinematic-scroll{display:inline-flex;gap:45px;align-items:center;padding-bottom:10px;border-bottom:1px solid #fff;color:#fff;font:800 11px 'DM Sans',sans-serif;letter-spacing:.14em;text-decoration:none}.cinematic-scroll span{font-size:22px}
-.cinematic-gallery{padding:110px clamp(20px,6vw,110px) 100px;background:#f9f9f7;color:#181818}
-.cinematic-gallery-intro{margin:0 0 55px;display:grid;grid-template-columns:1fr 2fr;gap:22px;border-top:1px solid #222;padding-top:27px;align-items:start}
-.cinematic-gallery-intro p{font:800 11px 'DM Sans',sans-serif;letter-spacing:.16em;margin:0}
-.cinematic-gallery-intro h2{font:600 clamp(38px,5vw,80px)/1.08 'Space Grotesk',sans-serif;letter-spacing:-.055em;margin:0}
-.cinematic-gallery-intro span{grid-column:2;font:400 15px/1.6 'DM Sans',sans-serif;color:#656565}
-.cinematic-stories{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:55px 25px}
-.cinematic-tile{grid-column:span 6;margin:0;min-width:0}
-.cinematic-tile-narrow{grid-column:span 5}.cinematic-tile-wide{grid-column:span 7}
-.cinematic-tile img,.cinematic-tile video{display:block;width:100%;height:clamp(335px,40vw,650px);object-fit:cover;background:#222;box-shadow:none;border:0;filter:saturate(.9)}
-.cinematic-tile:nth-child(1) video,.cinematic-tile:nth-child(4) img,.cinematic-tile:nth-child(8) img{object-position:center center}
-.cinematic-tile:nth-child(2) img{object-position:center 48%}.cinematic-tile:nth-child(6) img{object-position:center 60%}
-.cinematic-tile figcaption{display:flex;flex-direction:column;align-items:start;gap:6px;padding:16px 0 0;border:0;text-align:left;color:#171717}
-.cinematic-tile figcaption strong{font:700 clamp(20px,2vw,28px) 'Space Grotesk',sans-serif;letter-spacing:-.025em}
-.cinematic-tile figcaption span{font:400 14px/1.55 'DM Sans',sans-serif;color:#626262}
-.cinematic-end{display:flex;max-width:380px;justify-content:space-between;margin:75px 0 0;padding-top:18px;border-top:1px solid #333;color:#111;font:800 11px 'DM Sans',sans-serif;letter-spacing:.13em}
-.cinematic-end span{font-size:20px}
-@media(max-width:860px){.cinema-logo span{display:none}.cinema-header nav{gap:15px}.cinematic-gallery-intro{grid-template-columns:1fr}.cinematic-gallery-intro span{grid-column:1}.cinematic-stories{gap:45px 18px}.cinematic-tile img,.cinematic-tile video{height:400px}}
-@media(max-width:600px){.cinematic-hero{min-height:620px}.cinema-header{padding:22px 18px}.cinema-logo{font-size:11px}.cinema-header nav{gap:10px}.cinema-header nav a{font-size:10px}.cinematic-hero-content{left:23px;right:22px;bottom:75px}.cinematic-hero-content h1{font-size:clamp(52px,12.8vw,80px)}.cinematic-hero-content p{font-size:15px}.cinematic-gallery{padding:72px 18px}.cinematic-gallery-intro h2{font-size:45px}.cinematic-tile,.cinematic-tile-narrow,.cinematic-tile-wide{grid-column:1/-1}.cinematic-tile img,.cinematic-tile video{height:440px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.montage{position:relative;min-height:600px;height:100svh;background:#111;color:#fff;overflow:hidden;isolation:isolate}
+.montage-stage,.montage-scene{position:absolute;inset:0}
+.montage-scene{opacity:0;visibility:hidden;transition:opacity .95s ease,visibility 0s linear .95s;pointer-events:none}
+.montage-scene.active{opacity:1;visibility:visible;transition:opacity .95s ease;pointer-events:auto}
+.montage-scene img,.montage-scene video{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;object-position:center center}
+.montage-scene:nth-child(1) img{object-position:center 45%}
+.montage-scene:nth-child(3) img,.montage-scene:nth-child(5) img{object-position:center 52%}
+.montage-scene:nth-child(7) img{object-position:center 46%}
+.montage-shade{position:absolute;inset:0;background:linear-gradient(180deg,#08080880 0%,transparent 30%,transparent 46%,#050505b5 100%),linear-gradient(90deg,#07070766 0%,transparent 70%)}
+.montage-header{position:absolute;z-index:10;left:0;right:0;top:0;display:flex;align-items:center;justify-content:space-between;gap:25px;padding:26px clamp(22px,5vw,88px);border-bottom:1px solid #fff5}
+.montage-name{color:#fff!important;font:800 15px 'DM Sans',sans-serif;letter-spacing:.11em;text-decoration:none}
+.montage-header nav{display:flex;gap:27px}.montage-header nav a{color:#fff!important;font:700 12px 'DM Sans',sans-serif;text-decoration:none}.montage-header nav a:hover{opacity:.7}
+.montage-caption{position:absolute;left:clamp(26px,6vw,110px);right:25px;bottom:clamp(130px,17vh,200px);z-index:2;max-width:950px;transition:transform 1s ease,opacity 1s ease;transform:translateY(17px);opacity:0}
+.montage-scene.active .montage-caption{transform:translateY(0);opacity:1}
+.montage-caption h2{color:#fff;font:700 clamp(40px,5.7vw,90px)/1.06 'Space Grotesk',sans-serif;letter-spacing:-.06em;margin:0 0 14px;text-shadow:0 2px 18px #0007}
+.montage-caption p{font:500 clamp(14px,1.5vw,21px)/1.65 'DM Sans',sans-serif;color:#f3f3f3;margin:0;max-width:710px;text-shadow:0 1px 8px #0008}
+.montage-controls{position:absolute;z-index:10;right:clamp(25px,5vw,90px);bottom:57px;display:flex;gap:10px}
+.montage-control{width:43px;height:43px;border:1px solid #fff9;border-radius:50%;background:#1115;color:#fff;cursor:pointer;font-size:17px;display:grid;place-items:center;transition:background .2s}.montage-control:hover{background:#fff3}
+.montage-indicators{position:absolute;left:clamp(26px,6vw,110px);bottom:53px;z-index:10;display:flex;gap:5px;width:min(340px,40vw);height:3px}
+.montage-indicator{flex:1;background:#ffffff50;overflow:hidden}.montage-indicator i{display:block;height:100%;width:0;background:#fff}.montage-indicator.done i{width:100%}
+.montage-scroll{position:absolute;left:clamp(26px,6vw,110px);bottom:83px;z-index:10;display:inline-flex;gap:16px;align-items:center;color:#fff!important;text-decoration:none;font:700 10px 'DM Sans',sans-serif;letter-spacing:.15em}
+.montage-scroll span{font-size:19px}
+@media(max-width:700px){.montage{min-height:570px}.montage-header{padding:19px 20px}.montage-name{font-size:11px}.montage-header nav{gap:11px}.montage-header nav a{font-size:10px}.montage-caption{left:23px;bottom:150px;right:22px}.montage-caption h2{font-size:clamp(39px,9vw,63px)}.montage-caption p{font-size:14px}.montage-controls{bottom:44px;right:20px;gap:6px}.montage-control{width:36px;height:36px}.montage-indicators{bottom:41px;left:23px;width:35vw}.montage-scroll{bottom:78px;left:23px;font-size:9px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.montage-scene,.montage-caption{transition:none}}
