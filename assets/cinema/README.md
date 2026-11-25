@@ -1,5 +1,20 @@
-# Cinematic portfolio media
+# Cinematic homepage media
 
-Upload the optimized photos and `hero-reel.mp4` from the provided media ZIP into this folder on the `cinematic-portfolio-preview` branch. Keep the filenames unchanged. The portfolio hero and filmstrip reference this folder.
+This folder holds the original photos and short excerpts of the original videos supplied for Arin's portfolio. **No synthetic motion, slideshow, or stitched video.**
 
-The video is intentionally silent (autoplay requires muted playback in most browsers). Do not merge the branch until the media has been uploaded and the preview reviewed.
+To complete the preview, upload these files to this folder in the `cinematic-portfolio-preview` branch:
+
+- `fsae-hero.jpg` — opening portrait in Formula SAE car
+- `chassis-lift.jpg` — team lifting carbon-fiber chassis
+- `perimeter-test.jpg` and `instron-testing.jpg` — test fixtures
+- `industrial-me.jpg` — personal photo at Tesla
+- `crew.jpg` — Illinois Motorsports team
+- `campus-travel.jpg` — optional extra photo
+- `machining.mp4` — original machine-shop video
+- `circuit-testing.mp4` — original electronics work video
+- `mechanical-testing.mp4` — original testing video
+- `racecar-in-motion.mp4` — original FSAE car footage
+
+The homepage renders the car photo as a static opening image. Scrolling shows large original videos and photos with short captions. Videos are muted, loop when visible, and retain playback controls.
+
+All files are provided in the `cinematic-original-media.zip` package. **Do not merge PR #7 until the upload and visual review are complete.**
