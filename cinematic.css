@@ -1,0 +1,35 @@
+/* Cinematic opening — dedicated to the work, not the interface. */
+html{scroll-behavior:smooth}
+.cinema{position:relative;height:100svh;min-height:640px;background:#141414;color:#fff;overflow:hidden;isolation:isolate}
+.cinema-film{position:absolute;inset:0;z-index:-2;background:#171717 url('fsae-project-thumbnail-v4.png') center/cover no-repeat}
+.cinema-film video{position:absolute;width:100%;height:100%;object-fit:cover;inset:0;filter:contrast(1.11) saturate(.73) brightness(.72)}
+.cinema-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.54),transparent 80%),linear-gradient(0deg,rgba(0,0,0,.73),transparent 47%,rgba(0,0,0,.28));pointer-events:none}
+.cinema-header{position:absolute;z-index:3;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;gap:25px;padding:32px clamp(22px,5vw,88px);border-bottom:1px solid #ffffff50}
+.cinema-logo{color:#fff;font:800 14px 'DM Sans',sans-serif;letter-spacing:.13em;text-decoration:none}
+.cinema-logo span{font-size:9px;font-weight:600;color:#d2d2d2;margin-left:16px}
+.cinema-header nav{display:flex;gap:27px;align-items:center}
+.cinema-header nav a{color:#fff;font-size:12px;font-weight:700;text-decoration:none;opacity:.9;transition:opacity .2s}.cinema-header nav a:hover{opacity:.5}
+.cinema-content{position:absolute;left:clamp(22px,8vw,148px);right:24px;top:51%;transform:translateY(-43%);max-width:1050px}
+.cinema-overline{font:700 11px 'DM Sans',sans-serif;letter-spacing:.2em;margin:0 0 30px;color:#eeeeee}
+.cinema-content h1{font:700 clamp(76px,11vw,182px)/.86 'Space Grotesk',sans-serif;letter-spacing:-.085em;margin:0;text-shadow:0 1px 30px #0005}
+.cinema-content h1 em{font-weight:400;font-style:normal;color:#ffffffb8}
+.cinema-sub{font-size:clamp(14px,1.5vw,19px);line-height:1.6;max-width:520px;margin:34px 0 31px;color:#e7e7e7}
+.cinema-discover{display:inline-flex;align-items:center;gap:40px;text-transform:uppercase;font:800 11px 'DM Sans',sans-serif;letter-spacing:.14em;color:#fff;border-bottom:1px solid #fff;padding-bottom:13px}
+.cinema-discover span{font-size:21px}.cinema-discover:hover{opacity:.75}
+.cinema-caption-line{position:absolute;z-index:3;bottom:40px;left:clamp(22px,5vw,88px);right:clamp(22px,5vw,88px);display:flex;align-items:center;justify-content:space-between;gap:20px;font:700 11px 'DM Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.cinema-caption-line>div{display:flex;align-items:center;gap:22px}.cinema-caption-counter{color:#ffffff9c}.cinema-caption-text{color:#fff}
+.cinema-sound{font:inherit;letter-spacing:inherit;color:#fff;border:0;background:none;cursor:pointer;padding:8px}
+.cinema-progress{position:absolute;bottom:0;left:0;right:0;height:3px;background:#ffffff38}.cinema-progress span{display:block;height:100%;width:0;background:#fff}
+.cinema-interlude{background:#f8f8f6;padding:115px clamp(20px,6vw,105px) 105px;color:#151515}
+.cinema-interlude-head{display:flex;justify-content:space-between;align-items:start;gap:30px;padding:0 0 34px;border-bottom:1px solid #1b1b1b;margin-bottom:38px}
+.cinema-interlude-head span{font-size:11px;letter-spacing:.18em;font-weight:800}.cinema-interlude-head p{font:500 clamp(22px,2.7vw,38px)/1.25 'Space Grotesk',sans-serif;letter-spacing:-.04em;max-width:590px;margin:0}
+.cinema-frames{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px}
+.cinema-frame{grid-column:span 5;min-width:0;margin:0;position:relative}.cinema-frame-wide{grid-column:span 7}.cinema-frame-narrow{grid-column:span 5}
+.cinema-frame figcaption{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:0 0 13px;margin:0;border:0}
+.cinema-frame img{width:100%;height:clamp(265px,33vw,535px);object-fit:cover;display:block;filter:saturate(.82)}
+.cinema-frame:nth-child(3) img{object-position:center 45%}.cinema-frame:nth-child(4) img{object-position:center 55%}.cinema-frame:nth-child(5) img{object-position:center 50%}
+.cinema-next{display:flex;justify-content:space-between;max-width:430px;font:700 15px 'DM Sans',sans-serif;border-top:1px solid #111;margin-top:65px;padding:25px 0}
+.cinema-next span{font-size:20px}
+@media(max-width:850px){.cinema-header{padding:25px}.cinema-logo span{display:none}.cinema-header nav{gap:16px}.cinema-content{left:30px}.cinema-frames{gap:17px}.cinema-frame,.cinema-frame-wide,.cinema-frame-narrow{grid-column:span 6}.cinema-frame img{height:350px}.cinema-interlude-head{display:block}.cinema-interlude-head p{margin-top:20px}}
+@media(max-width:600px){.cinema{min-height:590px}.cinema-header nav{gap:9px}.cinema-header nav a{font-size:10px}.cinema-logo{font-size:11px}.cinema-content h1{font-size:clamp(66px,17vw,110px)}.cinema-overline{font-size:9px;line-height:1.6;margin-bottom:20px}.cinema-sub{max-width:330px;margin:25px 0}.cinema-caption-line{bottom:34px;font-size:9px}.cinema-caption-line>div{gap:8px}.cinema-sound{font-size:9px}.cinema-interlude{padding:75px 18px}.cinema-frame,.cinema-frame-wide,.cinema-frame-narrow{grid-column:1/-1}.cinema-frame img{height:400px}.cinema-frames{gap:28px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cinema-film video{display:none}}
